@@ -1,0 +1,172 @@
+.search-form {
+
+    @include xs {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($black, 0.9);
+        z-index: 999;
+    }
+
+    .close-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+.search-cont {
+    position: relative;
+    height: 45px;
+    width: 471px;
+
+    @include md {
+        width: 400px;
+    }
+
+    @include sm {
+        width: 300px;
+    }
+
+    @include xs {
+        width: 95%;
+        margin: 120px auto;
+    }
+}
+
+.search-button {
+    border: none;
+    position: absolute;
+    background-color: transparent;
+    color: $black;
+    left: 19px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    font-size: 18px;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $gold;
+    }
+}
+
+#{$ltr} .search-button {
+    left: auto;
+    right: 19px;
+}
+
+.search-input {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0 27px;
+    border-radius: 50px;
+    font-size: 14px;
+    text-align: right;
+    color: $black;
+    @include transition(all 0.3s ease-in-out);
+
+    border: 2px solid $border;
+
+    &::placeholder {
+        text-align: right;
+        color: #bbbbbb;
+        font-size: 14px;
+    }
+
+    &:focus {
+        border: 2px solid $gold;
+    }
+}
+
+#{$ltr} .search-input {
+    text-align: left;
+
+    &::placeholder {
+        text-align: left;
+    }
+}
+
+//////////////news///////////////
+
+.newsletter-cont {
+    position: relative;
+}
+
+.newsletter-input {
+    background-color: #fff;
+    width: 100%;
+    height: 45px;
+    border-radius: 45px;
+    padding: 0 33px;
+    font-size: 15px;
+    text-align: right;
+    color: $text;
+    border: 1px solid #ebebeb;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        text-align: right;
+        font-size: 14px;
+        color: #bbbbbb;
+    }
+
+    &:focus {
+        border-color: $gold;
+
+    }
+
+
+}
+
+
+#{$ltr} .newsletter-input {
+    text-align: left;
+
+    &::placeholder {
+        text-align: left;
+    }
+}
+
+.newsletter-button {
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(to right, #866e35, #c8b380, #c8b380, #866e35);
+    background-size: 200%;
+    width: 35px;
+    height: 35px;
+    @include transition(all 0.3s ease-in-out);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-position-x: 100%;
+    }
+
+    &:after {
+        content: "\e879";
+        font-family: 'Linearicons-Free';
+        font-size: 14px;
+        color: #fff;
+        @include transition(all 0.3s ease-in-out);
+    }
+}
+
+#{$ltr} .newsletter-button {
+    left: auto;
+    right: 6px;
+
+    &:after {
+        content: "\e87a";
+    }
+}

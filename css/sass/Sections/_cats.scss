@@ -1,0 +1,135 @@
+.banners {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include xs {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .banner {
+        width: calc(100% / 3 - 10.7px);
+        margin-left: 16px;
+        margin-top: 16px;
+        display: block;
+        overflow: hidden;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 16px;
+        }
+
+        &:nth-of-type(3n) {
+            margin-left: 0;
+
+            #{$ltr} & {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        &:nth-of-type(4n) {
+            width: calc(100% / 2 - 8px);
+
+            @include xs {
+                width: 100%;
+            }
+        }
+
+        &:nth-of-type(5n) {
+            width: calc(100% / 2 - 8px);
+            margin-left: 0;
+
+            @include xs {
+                width: 100%;
+            }
+
+            #{$ltr} & {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        img {
+            @include transition(all 0.5s ease-in-out);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                -moz-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                -o-transform: scale(1.05);
+            }
+        }
+
+        @include xs {
+            margin-left: 0;
+            width: 100%;
+
+            #{$ltr} & {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            &:nth-of-type(5) {
+                order: 6;
+            }
+        }
+    }
+}
+
+
+.banner-cont {
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 70px;
+        margin-bottom: 10px;
+
+        @include xs {
+            margin-top: 40px;
+            margin-bottom: 0px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            backface-visibility: hidden;
+            @include transition(all 0.7s ease-in-out);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.5)));
+            background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5));
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        &:hover {
+            &:before {
+                -webkit-animation: shape 0.7s linear;
+                animation: shape 0.7s linear;
+            }
+
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

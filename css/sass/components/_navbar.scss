@@ -1,0 +1,38 @@
+nav {
+    background-color: $text;
+
+    @include xs {
+        display: none;
+    }
+}
+
+.mo-navbar {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include sm {
+        justify-content: space-around;
+    }
+}
+
+.nav-li {
+    margin: 0 12px;
+
+    @include sm {
+        margin: 0;
+    }
+}
+
+.nav-anchor {
+    font-size: 16px;
+    color: #fff;
+    font-family: med;
+    @include transition(all 0.3s ease-in-out);
+    text-transform: capitalize;
+
+    &:hover {
+        color: $gold;
+    }
+}

@@ -1,0 +1,97 @@
+.features {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+
+    @include xs {
+        margin: 0;
+        padding: 40px 0 0;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        #{$ltr} & {
+            flex-wrap: nowrap;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    .feature {
+        font-size: 15.68px;
+        color: $text;
+        display: flex;
+        align-items: center;
+        cursor: default;
+        text-transform: capitalize;
+
+        @include xs {
+            width: 50%;
+            margin: auto;
+            flex-direction: column;
+            padding: 0 2.5px;
+            margin-bottom: 25px;
+
+            #{$ltr} & {
+                width: 100%;
+            }
+
+            &:nth-of-type(n + 3) {
+                margin: auto;
+
+                #{$ltr} & {
+                    margin: 0 auto 25px;
+                }
+            }
+
+            &:last-of-type {
+                #{$ltr} & {
+                    margin: 0 auto 0;
+                }
+            }
+        }
+
+        span {
+            font-size: 23.52px;
+            color: $gold;
+            margin-left: 9px;
+            backface-visibility: hidden;
+            @include transition(all 0.5s ease-in-out);
+
+            @include xs {
+                margin: auto;
+                margin-bottom: 10px;
+            }
+        }
+
+
+    }
+}
+
+.sec-head {
+    font-size: 23px;
+    font-family: med;
+    width: max-content;
+    margin: auto;
+    background: linear-gradient(90deg, rgba(0, 16, 54, 1) 50%, rgba(66, 103, 150, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    margin-bottom: 33px;
+
+    @include xs {
+        margin-bottom: 25px;
+    }
+}
+
+.products-sec {
+    margin-top: 71px;
+
+    @include xs {
+        margin-top: 40px;
+    }
+}
