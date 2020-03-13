@@ -1092,12 +1092,12 @@ html[dir=ltr] .banners .banner:nth-of-type(5n) {
     margin-left: 0;
     width: 100%;
   }
+  .banners .banner img {
+    width: 100%;
+  }
   html[dir=ltr] .banners .banner {
     margin-left: 0;
     margin-right: 0;
-  }
-  .banners .banner:nth-of-type(5) {
-    order: 6;
   }
 }
 
