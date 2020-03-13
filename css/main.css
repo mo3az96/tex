@@ -759,10 +759,11 @@ html[dir=ltr] .mo-user-nav .user-anchor {
 }
 @media (max-width: 767px) {
   .mo-user-nav .user-anchor {
-    margin-left: 10px;
+    font-size: 20px;
+    margin-left: 15px;
   }
   html[dir=ltr] .mo-user-nav .user-anchor {
-    margin-right: 10px;
+    margin-right: 15px;
     margin-left: 0;
   }
 }
@@ -804,10 +805,10 @@ html[dir=ltr] .mo-user-nav .user-anchor .mo-text {
 @media (max-width: 767px) {
   .mo-user-nav .mo-menu-icon {
     display: flex;
-    margin-left: 10px;
+    margin-left: 15px;
   }
   html[dir=ltr] .mo-user-nav .mo-menu-icon {
-    margin-right: 10px;
+    margin-right: 15px;
     margin-left: 0;
   }
 }
@@ -826,7 +827,7 @@ html[dir=ltr] .mo-user-nav .user-anchor .mo-text {
 }
 @media (max-width: 767px) {
   .user-anchor-div {
-    margin-left: 10px;
+    margin-left: 15px;
   }
 }
 html[dir=ltr] .user-anchor-div {
@@ -835,7 +836,7 @@ html[dir=ltr] .user-anchor-div {
 }
 @media (max-width: 767px) {
   html[dir=ltr] .user-anchor-div {
-    margin-right: 10px;
+    margin-right: 15px;
     margin-left: 0;
   }
 }
