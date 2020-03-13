@@ -535,7 +535,7 @@ nav {
   position: relative;
   padding: 48px 0 31px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 767px) {
@@ -711,7 +711,6 @@ html[dir=ltr] .mo-header .lang .lang-dropdown:before {
 .sec-div {
   display: flex;
   align-items: center;
-  margin-bottom: 7px;
 }
 
 .mo-user-nav {
